@@ -1,0 +1,50 @@
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <h1 class="text-2 text-center">Quizzes</h1>
+    <div class="row" *ngIf="quizzes">
+      <div class="col-md-6" *ngFor="let q of quizzes">
+        <mat-card class="card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title style="font-family: 'MyFont3';font-size: x-large;">
+              {{ q.title }}
+            </mat-card-title>
+            <mat-card-subtitle>
+              {{ q.category.title }}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content class="mt20" >
+            <p class="truncate" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">{{ q.description }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button class="btn-3" mat-stroked-button>
+              Questions: {{ q.numberOfQuestions }}
+            </button>
+            <button class="btn-3" mat-stroked-button>
+              Total Marks: {{ q.maxMarks }}
+            </button>
+
+            <button
+              class="btn-2"
+              mat-raised-button
+              [routerLink]="'/user/instructions/' + q.qId"
+            >
+              Start
+            </button>
+          </mat-card-actions>
+          <!-- <mat-card-footer class="mt20">
+          <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+         </mat-card-footer> -->
+        </mat-card>
+      </div>
+
+      <div class="col-md-12" *ngIf="quizzes.length == 0">
+        <mat-card class="card-2">
+          <mat-card-content>
+            <h2 class="text">No data in this category !</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

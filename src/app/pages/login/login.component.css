@@ -1,0 +1,93 @@
+.full-width {
+  width: 100%;
+}
+
+.btn {
+  margin-right: 30px;
+  width: 30%;
+  color: black;
+  border-radius: 200px;
+}
+.btn:hover{
+  background-color: blue;
+}
+
+.btn2 {
+  width: 30%;
+  border-radius: 200px;
+}
+.field {
+  border-radius: 500px;
+  height: 60px;
+}
+.form-field {
+  margin-left: 43px;
+  width: 80%;
+}
+.ip-1 {
+  border-radius: 200px;
+}
+.icon {
+  font-size: 21px;
+}
+
+.register-here {
+  margin-top: 20px;
+  margin-left: 98px;
+  font-size: medium;
+  font-weight: 350;
+}
+.register-link {
+color: rgb(222, 245, 18) !important;
+  font-weight: 400;
+  margin-top: -3.5px;
+  font-size: medium;
+  position: relative;
+
+}
+.card {
+  margin-top: -20px;
+  height: 470px;
+  width: 75%;
+  margin-left: 400px;
+  background: inherit;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 60px;
+  position: relative;
+}
+.card:before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgb(255, 255, 255);
+  filter: blur(30px);
+  margin: -20px;
+}
+
+.main {
+  background-image: url('https://bluewavecx.com/wp-content/uploads/2022/09/16.jpg');
+  padding-top: 60px;
+  background-size:auto ;
+
+  background-position: right;
+  padding-bottom: 50px;
+  filter: brightness(80%);
+
+
+}
+.main::before{
+  filter: brightness(70%);
+}
+.img {
+  width: 40%;
+  height: 150px;
+  margin-top: -20px;
+  filter: brightness(90%);
+}

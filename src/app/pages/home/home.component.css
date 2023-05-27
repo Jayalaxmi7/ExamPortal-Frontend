@@ -1,0 +1,229 @@
+.home {
+  position: center;
+}
+/* .card{
+  width: 100%;
+  height: 300px;
+
+} */
+/* .img{
+  width: 100%;
+  height: 600px;
+  background: inherit;
+} */
+.img {
+  background: url("https://wallpaper.dog/large/20382896.jpg") no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  animation: slide-in 1s ease-in-out;
+}
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.center .title {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.center .sub_title {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+
+.team {
+  width: 250px;
+  margin-left: 75px;
+  background-color: rgba(85, 107, 47, 0.048);
+}
+.team1 {
+  width: 250px;
+  margin-left: 60px;
+  background-color: rgba(85, 107, 47, 0.041);
+}
+.img-team {
+  border-radius: 50%;
+  width: 160px;
+  margin-left: 45px;
+  height: 155px;
+  background-size: cover;
+}
+.img-team3 {
+  border-radius: 50%;
+  width: 160px;
+  margin-left: 45px;
+  height: 155px;
+  background-size: cover;
+}
+.img-team1 {
+  border-radius: 50%;
+  width: 160px;
+  margin-left: 45px;
+  height: 155px;
+  object-fit: cover;
+  object-position: center;
+}
+.name2 {
+  margin-left: -30px;
+  font-size: medium;
+  font-family: "MyFont2";
+  font-weight: 600;
+}
+.name1 {
+  font-size: 17px;
+  margin-left: 5px;
+  font-family: "MyFont2";
+  font-weight: 600;
+}
+.sub {
+  margin-left: 7px;
+  font-size: small;
+}
+.sub1 {
+  font-size: small;
+}
+.title-team {
+  margin-top: 10px;
+  margin-left: 560px;
+  margin-bottom: 50px;
+  font-size: xxx-large;
+  font-weight: 100;
+  font-family: "MyFont2";
+}
+.img-AD {
+  background-color: green;
+}
+.img-AA {
+  background-color: green;
+  object-fit: none;
+  object-position: center top;
+}
+.title-about {
+  margin-top: -50px;
+  margin-left: 600px;
+  margin-bottom: 90px;
+  color: #fff;
+  font-size: xxx-large;
+  font-weight: 100;
+  font-family: "MyFont2";
+}
+.about {
+  background-image: url("../../../assets/about.jpg");
+  margin-top: 40px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(90%);
+  filter: saturate(60%);
+  position: relative;
+}
+.about::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.603);
+}
+.content {
+  color: #ffffff;
+  font-size: larger;
+  font-weight: 300;
+  text-align: center;
+}
+.content1 {
+  font-size: 25px;
+  font-family: "Myfont";
+  letter-spacing: 3px;
+  line-height: 30px;
+  filter: brightness(100%);
+}
+.contact-card {
+  background-color: rgba(223, 10, 99, 0.274);
+  background: inherit;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 60px;
+  position: relative;
+  width: 33%;
+  margin-left: 450px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.contact-card:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(5px);
+  margin: -20px;
+}
+.icons {
+  background-color: black;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.icon-text {
+  vertical-align: middle;
+  margin-left: 30px;
+  size: larger;
+  width: 50px;
+  font-size: 30px;
+  height: 50px;
+  margin-top: 13px;
+}
+.list {
+  margin-top: 20px;
+}
+.font-contact {
+  font-size: 20px;
+  font-weight: 590;
+  font-family: "MyFont1";
+}
+.main {
+  background-image: url("https://cdn.cbeditz.com/cbeditz/large/11624180227dyhfak5y47abbndbpulojq07xnuaqanncehzjncp8ivyyaomyprwpkt3ummmj1yb2ebier5zeeym1xvrcpni4b7kb3hszao57xax.png");
+  background-position: center;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  margin-bottom: -50px;
+  filter: brightness(90%);
+  filter: opacity(95%);
+}

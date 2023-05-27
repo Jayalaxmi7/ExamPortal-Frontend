@@ -1,0 +1,167 @@
+<div class="main">
+  <div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <mat-card class="card">
+            <div class="logo text-center">
+              <img class="img" src="../../../assets/Final logo.png" alt="" />
+            </div>
+
+            <h1 class="register text-center" style="font-family: 'MyFont3';font-weight: 500;font-size: 45px;margin-bottom: 10px;">Registration</h1>
+            <!-- {{user | json}} -->
+
+            <div class="field">
+              <form (ngSubmit)="formSubmit()" >
+                <!-- Firstname -->
+                <div class="row">
+                  <div class="col">
+                    <mat-form-field class="name1" appearance="outline">
+                      <mat-label>Firstname</mat-label>
+                      <input
+                      class="input"
+                        required
+                        [(ngModel)]="user.firstname"
+                        name="firstname"
+                        matInput
+                        placeholder="Enter your firstname"
+                      />
+                    </mat-form-field>
+                  </div>
+
+                  <!-- Lastname -->
+                  <div class="col">
+                    <mat-form-field class="name2" appearance="outline">
+                      <mat-label>Lastname</mat-label>
+                      <input class="input"
+                        required
+                        [(ngModel)]="user.lastname"
+                        name="lastname"
+                        matInput
+                        placeholder="Enter your lastname"
+                      />
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <!-- Username -->
+                <mat-form-field class="full-width"  appearance="outline">
+                  <mat-label>Username</mat-label>
+                  <input
+                  class="input"
+                  [formControl]="usernameFormControl"
+                    required
+                    [(ngModel)]="user.username"
+                    name="username"
+                    matInput
+                    placeholder="Enter your username"
+                  />
+                  <mat-error *ngIf="usernameFormControl.invalid && usernameFormControl.touched">
+                    <span style="color: black;" *ngIf="usernameFormControl.hasError('required')">Username is required.</span>
+                    <span style="color: black;" *ngIf="usernameFormControl.hasError('minlength')">Username must be at least 5 characters long.</span>
+                    <span style="color: black;" *ngIf="usernameFormControl.hasError('pattern')">Username can only contain letters, numbers, underscores, and hyphens.</span>
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- Password -->
+                <mat-form-field class="full-width" appearance="outline" style="margin-top: -17px;">
+                  <mat-label>Password</mat-label>
+                  <input
+                    style="margin-bottom: -30px;"
+                    required
+                    class="input"
+                    [(ngModel)]="user.password"
+                    name="password"
+                    type="password"
+                    matInput
+                    placeholder="Enter your password"
+                    [formControl]="passwordFormControl"
+                  />
+                  <mat-error *ngIf="passwordFormControl.invalid && passwordFormControl.touched">
+                    <span style="color: black;" *ngIf="passwordFormControl.hasError('required')">Password is required.</span>
+                    <span style="color: black;" *ngIf="passwordFormControl.hasError('minlength')">Password must be at least 8 characters long.</span>
+                    <span style="color: black;" *ngIf="passwordFormControl.hasError('pattern')">Password must contain at least one letter and one digit.</span>
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- Email -->
+                <mat-form-field class="full-width" appearance="outline" style="margin-bottom: 20px;">
+                  <mat-label>Email</mat-label>
+                  <input type="email"
+                  [formControl]="emailFormControl"
+                  class="input"
+                    required
+                    [(ngModel)]="user.email"
+                    name="email"
+                    matInput
+                    placeholder="Enter your email"
+                  />
+                  <mat-error style="color: black;" *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                  </mat-error>
+                  <mat-error style="color: black;" *ngIf="emailFormControl.hasError('required')">
+                    Email is required
+                  </mat-error>
+                </mat-form-field>
+
+                <!-- Phone number -->
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label >Phone</mat-label>
+                  <input
+                  [formControl]="phoneNumberFormControl"
+                    [(ngModel)]="user.phone"
+                    name="phone"
+                    type="number"
+                    class="input"
+                    matInput
+                    placeholder="Enter your phone number"
+                    (input)="restrictInputLength($event)"
+                  />
+                  <mat-error *ngIf="phoneNumberFormControl.invalid && phoneNumberFormControl.touched">
+                    <span style="color: black;" *ngIf="phoneNumberFormControl.hasError('required')">Phone number is required.</span>
+                    <span style="color: black;" *ngIf="phoneNumberFormControl.hasError('pattern')">Invalid phone number format.</span>
+                  </mat-error>
+
+                </mat-form-field>
+
+                <div class="button" style="margin: 30px; padding: -15px">
+                  <button
+                    type="submit"
+                    style="
+                      background-color: rgb(245, 43, 154);
+                      width: 30%;
+                      border-radius: 200px;
+                      margin-top: -30px;
+                      font-family: 'MyFont1';
+                      font-size: medium;
+                      font-weight: 595;
+                    "
+                    mat-raised-button
+                  >
+                    Submit
+                  </button>
+                  <button
+                    style="
+                      margin-left: 25px;
+                      font-family: 'MyFont1';
+                      font-size: medium;
+                      font-weight: 595;
+                      width: 30%;
+                      border-radius: 200px;
+                      margin-top: -30px;
+                    "
+                    color="accent"
+                    mat-raised-button
+                    type="reset"
+                  >
+                    Reset
+                  </button>
+                </div>
+              </form>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

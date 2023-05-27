@@ -1,0 +1,84 @@
+.full-width {
+  width: 80%;
+  height: 60px;
+  margin-bottom: 37px;
+  padding: 10px;
+  margin-left: 54px;
+}
+.name1{
+  margin-left: 63px;
+  margin-top: 15px;
+  margin-bottom: -10px;
+  margin-right: 40px;
+  width: 60%;
+}
+.name2{
+  margin-top: 15px;
+  margin-bottom: -10px;
+  margin-left: -80px;
+
+  width: 115%;
+}
+
+.button {
+  margin-left: 20px;
+  text-align: center;
+}
+
+.register {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.main {
+  padding: 20px;
+  background-image: url('https://origympersonaltrainercourses.co.uk/files/img_cache/29783/1200_1657198573_Blank_PTwebBuild.png?1657549010');
+  filter: brightness(80%);
+  background-size: cover;
+  background-position: center ;
+  filter: opacity(90%);
+}
+
+.logo {
+  margin-top: 5px;
+}
+.email{
+  border-radius: 200px;
+}
+.card {
+  margin-top: 5px;
+  height: 650px;
+  width: 94%;
+  margin-left: 340px;
+  border-radius: 30px;
+  background: inherit;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  border-radius: 50px;
+}
+.card:before {
+  content: '';
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgb(255, 255, 255);
+  filter: blur(30px);
+  margin: -20px;
+}
+.img{
+  width: 20%;
+  height: 100px;
+  margin-top: -10px;
+  filter: brightness(90%);
+  filter: opacity(84%);
+}
+
+
+

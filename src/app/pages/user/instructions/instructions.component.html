@@ -1,0 +1,101 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-card class="card">
+          <mat-card-header>
+            <!-- Headings -->
+            <mat-card-title class="heading">
+              Read the instructions carefully
+            </mat-card-title>
+            <mat-card-subtitle class="subtitle"> </mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <!-- Contents -->
+            <h1 class="head">{{ quiz.title }}</h1>
+            <p class="desc">{{ quiz.description }}</p>
+
+            <mat-divider></mat-divider>
+            <br />
+            <h2 class="imp">Important Instructions</h2>
+            <ul>
+              <li class="list">
+                The examination will comprise of Objective type Multiple Choice
+                Questions (MCQs) .
+              </li>
+              <!-- Let the time of every questions is 1 minute -->
+
+              <li class="list">You can attempt Test multiple times .</li>
+              <li class="list">
+                Students must complete the
+                <b style="font-weight: 800">
+                  {{ quiz.numberOfQuestions }} questions
+                </b>
+                multiple-choice exam within the
+                <b style="font-weight: 800">
+                  {{ quiz.numberOfQuestions * 1 }} Minutes</b
+                >
+                time frame allotted for the exam .
+              </li>
+              <li class="list">
+                Each question carries
+                <b style="font-weight: 800">
+                  {{ quiz.maxMarks / quiz.numberOfQuestions }} marks</b
+                >
+                .
+              </li>
+              <li class="list">
+                There will be NO NEGATIVE MARKING for the wrong answers .
+              </li>
+              <li class="list">
+                The students just need to click on the Right Choice / Correct
+                option from the multiple choices /options given with each
+                question. For Multiple Choice Questions, each question has four
+                options, and the candidate has to click the appropriate option .
+              </li>
+              <li class="list">
+                You are allowed to submit only once, make sure that you have
+                correctly attempted all the questions before submission.
+              </li>
+              <li class="list">
+                Internet Explorer, Firefox or Google Chrome are required to log
+                into the exam .
+              </li>
+            </ul>
+            <mat-divider></mat-divider>
+            <br />
+            <h2 class="imp">Attempting Test</h2>
+            <ul>
+              <li class="list">
+                Click-> <b style="font-weight: 800">Start Test</b> button to
+                start the Test .
+              </li>
+              <li class="list">
+                The time will start the moment when you click the Start button .
+              </li>
+              <li class="list">
+                You can't resume this Test , If interrupted due to any reason .
+              </li>
+              <li class="list">Scroll down to move to the next Question .</li>
+              <li class="list">
+                Click on Submit test button to submission of ongoing Test .
+              </li>
+              <li class="list">
+                Result of the test is automatically generated in the form of PDF
+                format .
+              </li>
+            </ul>
+          </mat-card-content>
+
+          <mat-card-actions>
+            <!-- Actions -->
+            <button (click)="startQuiz()" class="btn" mat-raised-button>
+              Start Test
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

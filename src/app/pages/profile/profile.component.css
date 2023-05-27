@@ -1,0 +1,35 @@
+.profile-image {
+  max-width: 130px;
+  max-height: 130px;
+  margin-right: 100px;
+}
+.name {
+  margin-right: 100px;
+}
+.table {
+  width: 60%;
+  margin-left: 150px;
+  border-collapse: collapse;
+  font-weight: bold;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.table tr td {
+  padding: 15px 15px;
+  border: 0.5px solid rgb(229, 231, 235);
+}
+.btn1 {
+  margin-top: 15px;
+  margin-left: 400px;
+  padding: 10px 20px;
+  color: #f04293;
+  background-color: black;
+}
+.btn2 {
+  margin-top: 15px;
+  margin-left: 20px;
+  padding: 10px 30px;
+  color: #0f0208;
+  background-color: #f04293;
+}

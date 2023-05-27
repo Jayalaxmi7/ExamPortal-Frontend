@@ -1,0 +1,17 @@
+.textfield{
+  width: 100%;
+}
+.slide{
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.select{
+  width: 50%;
+}
+.btn{
+  margin: 20px ;
+}
+.card{
+  background-color: azure;
+}

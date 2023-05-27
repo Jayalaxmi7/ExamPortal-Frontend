@@ -1,0 +1,27 @@
+<mat-card class="design">
+  <mat-action-list class="list">
+    <div mat-subheader style=" font-family: 'MyFont3';
+    font-size: large;
+    font-weight: 550;
+    margin-left: 30px;
+    padding-bottom: 20px;
+    color: white;">Available Categories</div>
+    <mat-divider></mat-divider>
+    <button mat-list-item class="btn" routerLink="/user/0">
+      <mat-icon class="icon" mat-list-icon>apps</mat-icon>  <span class="btn" style="margin-left: 10px;">All Quizzes</span>
+    </button>
+    <mat-divider></mat-divider>
+
+    <button
+      [routerLink]="'/user/' + c.cid"
+      mat-list-item
+      *ngFor="let c of categories"
+    >
+      <mat-icon class="icon" mat-list-icon>auto_stories</mat-icon> <span class="btn" > {{ c.title }}</span>
+      <mat-divider [inset]="true" style="margin: 0;"></mat-divider>
+    </button>
+<mat-divider></mat-divider>
+
+  </mat-action-list>
+
+</mat-card>

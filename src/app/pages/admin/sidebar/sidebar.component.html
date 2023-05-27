@@ -1,0 +1,49 @@
+<mat-card class="design">
+  <mat-action-list class="list">
+    <div
+      mat-subheader
+      style="
+        font-family: 'MyFont3';
+        font-size: x-large;
+        font-weight: 550;
+      margin-left: 75px;
+        padding-bottom: 20px;
+        color: aliceblue;
+      "
+
+    >
+    Menu
+    </div>
+    <mat-divider></mat-divider>
+    <button routerLink="/admin" mat-list-item class="side">
+      <mat-icon class="icon" mat-list-icon>home</mat-icon>
+      <span class="text-side">Home</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-list-item routerLink="/admin/profile" class="side">
+      <mat-icon class="icon" mat-list-icon>person</mat-icon>
+      <span class="text-side">Profile</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-list-item routerLink="/admin/categories" class="side">
+      <mat-icon class="icon" mat-list-icon>category</mat-icon>
+      <span class="text-side">Categories</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-list-item routerLink="/admin/add-category" class="side">
+      <mat-icon class="icon" mat-list-icon>library_add</mat-icon
+      ><span class="text-side">Add Categories</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-list-item routerLink="/admin/quizzes" class="side">
+      <mat-icon class="icon" mat-list-icon>quiz</mat-icon
+      ><span class="text-side">Quizzes</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-list-item routerLink="/admin/add-quiz" class="side">
+      <mat-icon class="icon" mat-list-icon>add</mat-icon
+      ><span class="text-side">Add Quizzes</span>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-action-list>
+</mat-card>

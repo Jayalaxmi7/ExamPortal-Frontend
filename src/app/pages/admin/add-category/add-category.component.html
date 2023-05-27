@@ -1,0 +1,47 @@
+<mat-card style="background-color: azure">
+  <h1 style="margin-left: 40px;font-family: 'MyFont1'; font-size: xx-large;margin-top: 10px;font-weight: 550;">Add new category</h1>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="row">
+        <div class="col-md-9 offset-md-3">
+          <form (ngSubmit)="formSubmit()">
+            <mat-form-field
+              appearance="outline"
+              style="width: 65%; margin-top: 30px"
+            >
+              <mat-label>Title</mat-label>
+              <input
+                required
+                autofocus
+                type="text"
+                name="title"
+                matInput
+                placeholder="Enter the Title (e.g- Programming , Aptitude , English)"
+                [(ngModel)]="category.title"
+              />
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 65%">
+              <mat-label>Description</mat-label>
+              <textarea
+                name="description"
+                rows="7"
+                matInput
+                placeholder="Enter the Description (About category)"
+                [(ngModel)]="category.description"
+              ></textarea>
+            </mat-form-field>
+            <div class="container">
+              <button
+                mat-raised-button
+
+                style="margin-left: 190px;background-color: darkcyan;font-family: 'MyFont1';color: white; "
+              >
+              Click to Add
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

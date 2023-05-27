@@ -1,0 +1,54 @@
+<mat-toolbar class="navbar" color="primary">
+  <a
+    routerLink="/"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+  </a>
+  <h2 class="title" >ONLINE EXAM PORTAL</h2>
+
+  <ul>
+    <a *ngIf="!isLoggedIn" (click)="scrollToSection('home')" href="" class="home">Home</a>
+    <a *ngIf="!isLoggedIn" class="about" (click)="scrollToSection('about')" >About</a>
+    <a *ngIf="!isLoggedIn" class="contact"(click)="scrollToSection('contact')" >Contact</a>
+
+  </ul>
+  <button
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'"
+    class="login-btn"
+    aria-label="Example icon-button with heart icon"
+  >
+    Login
+  </button>
+
+  <button
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/register'"
+    class="register-btn"
+    aria-label="Example icon-button with heart icon"
+  >
+    Register
+  </button>
+
+  <button
+    *ngIf="isLoggedIn && user"
+    class="username"
+    mat-button
+
+    aria-label="Example icon-button with heart icon"
+    style="font-family: 'MyFont2';font-size: medium;"
+  >
+  Username :  {{ user.username }}
+  </button>
+
+  <button
+    (click)="logout()"
+    *ngIf="isLoggedIn"
+    class="logout-btn"
+    aria-label="Example icon-button with heart icon"
+  >
+    Logout
+  </button>
+</mat-toolbar>

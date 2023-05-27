@@ -1,0 +1,22 @@
+.example-header-image {
+  background-image: url('../../../../assets/test.png');
+  background-size: cover;
+}
+.card{
+  margin-top: 20px;
+  padding-bottom: 50px;
+  background-color: azure;
+}
+.btn{
+  background-color: rgba(47, 79, 79, 0.712);
+  color: white;
+  font-family: 'MyFont1';font-size: medium;
+}
+.btn2{
+  color: darkslategray;
+  font-family: 'MyFont1';font-size: medium;font-weight: 500;
+}
+.btn-1{
+  background-color: rgba(2, 12, 12, 0.952);
+  color:red;
+}

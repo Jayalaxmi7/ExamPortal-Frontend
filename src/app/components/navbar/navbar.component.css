@@ -1,0 +1,200 @@
+.nav-btn {
+  margin-left: 200px;
+  font-size: 14px;
+  padding: -100px;
+  height: 30px;
+}
+
+.navbar {
+  height: 60px;
+  background-color: black;
+  width: 100%;
+}
+
+.title {
+  margin-left: -45px;
+  margin-top: 11px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(232, 234, 236);
+  font-weight: 200;
+  animation: slide-in 1s ease-in-out;
+}
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.paragraph-1 {
+  margin-left: 400px;
+  margin-top: 10px;
+  font-size: smaller;
+}
+.paragraph-2 {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: smaller;
+}
+.login-btn {
+  margin: 5px;
+  margin-left: 850px;
+  margin-right: 20px;
+  height: 37px;
+  width: 90px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+  border: 2px solid teal;
+  border-radius: 60px;
+  transition: 0.5s;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 700;
+  color: bisque;
+}
+.register-btn {
+  height: 37px;
+  width: 90px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+  background-color: rgba(89, 177, 236, 0.863);
+  border-radius: 6px;
+  font-size: 16px;
+  border: 2px solid teal;
+  border-radius: 60px;
+  transition: 0.5s;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 700;
+  color: bisque;
+}
+.login-btn:hover {
+  background: teal;
+  color: rgb(8, 8, 8);
+}
+
+.register-btn:hover {
+  background: teal;
+  color: rgb(19, 11, 11);
+}
+.home {
+  margin-left: 600px;
+  color: rgb(247, 244, 244);
+  font-size: medium;
+  position: relative;
+  text-decoration: none;
+  font-weight: 300;
+}
+.home::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: teal;
+  border-radius: 5px;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+  transform-origin: right;
+}
+
+.home:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.about {
+  margin-left: 30px;
+  color: rgb(247, 244, 244);
+  font-size: medium;
+  position: relative;
+  text-decoration: none;
+  margin-right: -700px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.about::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: teal;
+  border-radius: 5px;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+  transform-origin: right;
+}
+.about:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.logout-btn {
+  margin-left: 50px;
+
+  height: 37px;
+  width: 100px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+  background-color: rgb(247, 36, 107);
+  border-radius: 60px;
+  border: 2px solid teal;
+  border-radius: 60px;
+  transition: 0.5s;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: lighter;
+  color: bisque;
+}
+.logout-btn:hover {
+  background: teal;
+  color: rgb(19, 11, 11);
+}
+.username {
+  margin-left: 680px;
+}
+.contact {
+  margin-right: -2700px;
+  margin-left: 730px;
+  color: rgb(247, 244, 244);
+  font-size: medium;
+  position: relative;
+  text-decoration: none;
+  font-weight: 300;
+  cursor: pointer;
+}
+.contact::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: teal;
+  border-radius: 5px;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+  transform-origin: right;
+}
+.contact:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+section {
+  scroll-behavior: smooth;
+  transition: scroll-margin 0.2s ease;
+}

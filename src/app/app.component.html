@@ -1,0 +1,14 @@
+<ngx-ui-loader
+  text="Loading"
+  fgsType="three-strings"
+  [fgsSize]="150"
+  [pbThickness]="2"
+></ngx-ui-loader>
+
+<div ngxUiLoaderBlurred (blur)="(3)">
+  <!-- This page content will be blurred/frosted when foreground loader is showed -->
+  <app-navbar></app-navbar>
+
+  <!-- Dynamic Content -->
+  <router-outlet></router-outlet>
+</div>

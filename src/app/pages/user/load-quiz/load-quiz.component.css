@@ -1,0 +1,62 @@
+.card {
+  margin-bottom: 20px;
+  margin-left: 30px;
+  background-color: azure;
+  width: 98%;
+}
+.card-2 {
+  margin-left: 40px;
+}
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.example-header-image {
+  background-image: url("../../../../assets/Exam-2.jpg");
+  background-size: cover;
+}
+
+.btn {
+  margin-top: 100px;
+  margin-left: 37px;
+}
+.btn-2 {
+  margin-top: 100px;
+  margin-left: 60px;
+  background-color: rgba(49, 128, 245, 0.808);
+  transition: 0.4s;
+  border-radius: 50px;
+  width: 20%;
+  font-family: 'MyFont1';
+  font-weight: 500;
+  font-size: medium;
+}
+.btn-2:hover{
+  background-color: rgb(40, 189, 189);
+  color: white;
+}
+.btn-3 {
+  width: 40%;
+  margin-top: 0px;
+  margin-right: 10px;
+  margin-left: 5px;
+  font-family: 'MyFont1';
+  font-weight: bold;
+  font-size: 14px;
+}
+.btn-4 {
+  width: 32%;
+  margin-top: 0px;
+}
+.text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.text-2 {
+  margin-left: 40px;
+  margin-top: 20px;
+  font-family: 'Myfont1';
+  font-size: xx-large;
+}

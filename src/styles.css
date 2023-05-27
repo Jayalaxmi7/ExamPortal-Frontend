@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.ml20 {
+  margin-left: 20px !important;
+}
+.mr20 {
+  margin-right: 20px !important;
+}
+.mt20 {
+  margin-top: 20px !important;
+}
+.mb20 {
+  margin-bottom: 20px !important ;
+}
+.ml10 {
+  margin-left: 10px !important;
+}
+.mr10 {
+  margin-right: 10px !important;
+}
+.mt10 {
+  margin-top: 10px !important;
+}
+.mb10 {
+  margin-bottom: 10px !important ;
+}
+@font-face {
+  font-family: 'MyFont';
+  src: url('assets/Montserrat-Thin.ttf');
+}
+@font-face {
+  font-family: 'MyFont1';
+  src: url('assets/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: 'MyFont2';
+  src: url('assets/Play-Regular.ttf');
+}
+@font-face {
+  font-family: 'MyFont3';
+  src: url('assets/Kanit-Regular.ttf');
+}

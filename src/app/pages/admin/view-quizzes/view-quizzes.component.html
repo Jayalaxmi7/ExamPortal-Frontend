@@ -1,0 +1,60 @@
+<mat-card class="card" *ngFor="let q of quizzes">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      {{ q.title }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ q.category.title }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;margin-left: 30px;">{{ q.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      [routerLink]="'/admin/view-questions/' + q.qId + '/' + q.title"
+      mat-stroked-button
+      color="primary"
+      class="btn"
+      style="margin-left: 20px;margin-top: 30px;"
+
+    >
+      Question
+    </button>
+    <button mat-stroked-button color="primary" class="btn2" style="margin-left: 20px;margin-top: 30px;">
+      Maximum Marks : {{ q.maxMarks }}
+    </button>
+    <button mat-stroked-button color="primary" class="btn2" style="margin-left: 20px;margin-top: 30px;">
+      Total Questions : {{ q.numberOfQuestions }}
+    </button>
+    <button
+    style="margin-left: 20px;margin-top: 30px;"
+      [routerLink]="'/admin/quiz/' + q.qId"
+      mat-stroked-button
+      color="primary"
+      class="btn"
+    >
+      Update
+    </button>
+
+    <button
+    style="margin-left: 20px;margin-top: 30px;"
+      mat-stroked-button
+      color="warn"
+      class="btn-1"
+      (click)="deleteQuiz(q.qId)"
+    >
+    <span style="font-family: 'MyFont1';font-size: medium;" >Delete</span>
+    <mat-icon style="vertical-align: middle;margin-top: -2px;">delete
+
+    </mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<div class="container text-center mt20">
+  <button routerLink="/admin/add-quiz" mat-raised-button style="background-color: darkcyan;color: white;font-family: 'MyFont1';">
+    Add New Quiz
+  </button>
+</div>

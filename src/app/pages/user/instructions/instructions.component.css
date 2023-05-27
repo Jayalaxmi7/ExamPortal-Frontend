@@ -1,0 +1,46 @@
+.heading{
+  margin-left: 20px;
+  font-size: medium;
+}
+.card{
+  margin-left: 40px;
+  margin-top: 10px;
+  background-color: azure;
+}
+
+.subtitle{
+  margin-left: 50px;
+}
+
+.head{
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.desc{
+  margin-left: 40px;
+}
+.imp{
+  margin-left: 20px;
+}
+.list{
+  font-weight: 570;
+
+  font-family: 'MyFont1';
+}
+.btn{
+  margin-top: 30px;
+  margin-left: 380px;
+  margin-bottom: 20px;
+  background-color: darkcyan;
+  color: white;
+  width: 20%;
+  font-family: 'MyFont1';
+  font-size: larger;
+  border-radius: 50px;
+  transition: 0.5s;
+
+}
+.btn:hover{
+  color: black;
+  background-color: cadetblue;
+}

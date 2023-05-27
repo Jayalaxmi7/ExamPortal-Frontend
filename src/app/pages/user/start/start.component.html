@@ -1,0 +1,147 @@
+<div class="container" disableContextMenu>
+<div class="bootstrap-wrapper" *ngIf="!isSubmit" disableContextMenu>
+  <div class="contained-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!-- Instructions -->
+       <mat-card class="card-3">
+        <mat-card-content>
+          <h2 class="instruction">Instructions</h2>
+          <ol>
+            <li class="list">Kindly do not refresh the page otherwise you will get new questions in this test.</li> <br>
+            <li class="list">Do not switch the current tab.</li> <br>
+            <li class="list">Do not minimize the window.</li>
+          </ol>
+        </mat-card-content>
+       </mat-card>
+      </div>
+
+      <div class="col-md-8">
+        <!-- Questions -->
+        <ng-container *ngIf="questions">
+          <h1 class="header">
+            <b style="font-weight: 500;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: x-large;"> {{ questions[0].quiz.title }}</b> Test
+          </h1>
+        </ng-container>
+
+        <mat-card *ngFor="let q of questions; let i = index" class="card">
+          <mat-card-content>
+            <p>
+              <b style="font-weight: 500">{{ i + 1 }}.</b
+              ><span class="ml10" [innerHTML]="q.content"></span>
+            </p>
+            <br />
+            <mat-divider></mat-divider>
+
+            <div class="row mt40" disableContextMenu>
+              <div class="col-md-6">
+                <span style="font-size: large; margin-top: -15px; margin-right: 10px;"> (A) </span>
+                <input
+                  [(ngModel)]="q.givenAnswer"
+                  type="radio"
+                  [value]="q.option1"
+                  name="{{ i }}"
+                /> {{ q.option1 }}
+              </div>
+              <div class="col-md-6">
+                <span style="font-size: large; margin-top: -15px; margin-right: 10px;"> (B) </span>
+                <input
+                  [(ngModel)]="q.givenAnswer"
+                  type="radio"
+                  [value]="q.option2"
+                  name="{{ i }}"
+                />{{ q.option2 }}
+              </div>
+            </div>
+            <div class="row mt40">
+              <div class="col-md-6">
+                <span style="font-size: large; margin-top: -15px; margin-right: 10px;"> (C) </span>
+                <input
+                  [(ngModel)]="q.givenAnswer"
+                  type="radio"
+                  [value]="q.option3"
+                  name="{{ i }}"
+                />{{ q.option3 }}
+              </div>
+              <div class="col-md-6">
+                <span style="font-size: large; margin-top: -15px; margin-right: 10px;"> (D) </span>
+                <input
+                  [(ngModel)]="q.givenAnswer"
+                  type="radio"
+                  [value]="q.option4"
+                  name="{{ i }}"
+                />{{ q.option4 }}
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <div class="container text-center">
+          <button (click)="submitTest()" class="btn" mat-raised-button>
+            Submit Test
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-2" disableContextMenu>
+        <!-- Progress -->
+        <mat-card class="card-2">
+          <mat-card-header>
+            <mat-card-title style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Timer</mat-card-title>
+            <mat-card-subtitle style="font-family: 'MyFont1';"
+              >Test will automatically submitted when timer reaches to
+              <b>0:0</b></mat-card-subtitle
+            >
+          </mat-card-header>
+          <mat-card-content>
+            <h2 class="time-head">{{ getFormattedTime() }}</h2>
+            <mat-spinner
+              diameter="70"
+              mode="determinate"
+              class="spin"
+              [value]="(timer / (this.questions.length * 1 * 60)) * 100"
+            ></mat-spinner>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Show the Result -->
+<div class="bootstrap-wrapper" *ngIf="isSubmit" disableContextMenu>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <mat-card class="result">
+        <mat-card-header>
+          <mat-card-title>
+            <h1 id="result" class="result-title" style="font-family: MyFont3;font-size: xx-large;color: white;">Result</h1>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="text-center">
+          <h2 class="result-head">Marks Secured : <b class="result">{{ marksGot }}</b></h2>
+          <h2 class="result-head">Correct Answers : <b class="result">{{ correctAnswers }}</b></h2>
+          <h2 class="result-head">Questions Attempted : <b class="result">{{ attempted }}</b></h2>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+          id="printPageButton"
+            class="print"
+            mat-fab
+            aria-label="Example icon button with a home icon"
+            (click)="printPage()"
+          >
+            <mat-icon>print</mat-icon>
+          </button>
+          <button
+          id="homePageButton"
+            class="home"
+            [routerLink]="'/user/0'"
+            mat-fab
+            color="warn"
+            aria-label="Example icon button with a home icon"
+          >
+            <mat-icon>home</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
